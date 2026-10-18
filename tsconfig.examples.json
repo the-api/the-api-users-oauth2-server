@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": true,
+    "emitDeclarationOnly": false,
+    "baseUrl": ".",
+    "paths": {
+      "knex": ["./node_modules/knex/types/index.d.ts"],
+      "the-api-routings": ["./node_modules/the-api-routings/dist/index.d.ts"],
+      "hono": ["./node_modules/hono/dist/types/index.d.ts"],
+      "hono/*": ["./node_modules/hono/dist/types/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "examples/**/*.ts"]
+}
